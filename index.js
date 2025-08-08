@@ -6,9 +6,7 @@ import invimaRouter from "./routes/invima.routes.js";
 
 dotenv.config();
 
-
 console.log("MONGO_DB_URI:", process.env.MONGO_DB_URI);
-
 
 const app = express();
 

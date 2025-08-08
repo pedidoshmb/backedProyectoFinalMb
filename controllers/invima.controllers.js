@@ -7,13 +7,13 @@ const hola = async (req, res) => {
 
 const createProducto = async (req, res) => {
   try {
-    console.log("📩 Datos recibidos en backend:", req.body);
+    console.log("Datos recibidos en backend:", req.body);
     const producto = new Invima(req.body);
     await producto.save();
-    console.log("💾 Producto guardado:", producto);
-    return res.status(201).json({ mensaje: "Producto guardado", producto });
+    console.log("Medicamento guardado:", producto);
+    return res.status(201).json({ mensaje: "Medicamento guardado", producto });
   } catch (error) {
-    console.error("❌ Error al crear Medicamento:", error);
+    console.error(" Error al crear Medicamento:", error);
     return res.status(500).json({ error: "No se pudo guardar" });
   }
 };
